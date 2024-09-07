@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Сontainer {
+  width: 100%;
+  max-width: 600px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.Title {
+  font-size: 48px;
+  color: #424750;
+}
+
+.KeysCups {
+  margin-left: 8px;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  font-size: 8px;
+  background: #5030e533;
+  border-radius: 4px;
+  color: #000;
+
+  svg {
+    font-size: 10px;
+  }
+}

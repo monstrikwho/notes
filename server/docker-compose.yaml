@@ -1,0 +1,25 @@
+name: notes
+
+services:
+  server:
+    container_name: server
+    env_file:
+      - .env
+    ports:
+      - $PORT:$PORT
+      - $SOCKET_PORT:$SOCKET_PORT
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm run start
+    volumes:
+      - .:/app/
+      - /app/node_modules
+    environment:
+      - NODE_ENV=production
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge

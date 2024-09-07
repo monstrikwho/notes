@@ -1,0 +1,17 @@
+name: notes
+
+services:
+  client:
+    container_name: client
+    ports:
+      - 3000:3000
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm start
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
